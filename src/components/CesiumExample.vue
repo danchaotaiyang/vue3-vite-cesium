@@ -4,7 +4,7 @@ import { computed, onBeforeMount, reactive, ref, watch } from 'vue';
 
 import { VERSION } from 'cesium';
 
-import { cesiumAccessTokenDefault } from '../assets/js/cfg.js';
+import { cesiumAccessTokenDefault } from '@/config.js';
 
 
 const props = defineProps({

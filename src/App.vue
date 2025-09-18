@@ -1,14 +1,12 @@
 <script setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { VERSION } from 'cesium';
-import disableDevtool from 'disable-devtool';
 import { routes } from '@/router';
 import { SideMenu } from '@/components/SideMenu';
 
 
 const route = useRoute();
-const router = useRouter();
 const scrollBar = ref();
 const asideRef = ref();
 
@@ -57,30 +55,6 @@ watch(() => route.path, () => {
 });
 
 document.title = `Cesium ${ VERSION }`;
-
-if (import.meta.env.PROD) {
-    disableDevtool({
-        disableMenu: false,
-        ondevtoolopen() {
-            if (route.name !== 'ErrorDebug') {
-                router.replace({
-                    name: 'ErrorDebug',
-                    query: {
-                        redirect: route.name
-                    }
-                });
-            }
-        },
-        ondevtoolclose() {
-            if (route.name === 'ErrorDebug') {
-                router.replace({
-                    name: route.query.redirect || 'Home'
-                });
-            }
-        }
-    });
-}
-
 </script>
 
 <template>

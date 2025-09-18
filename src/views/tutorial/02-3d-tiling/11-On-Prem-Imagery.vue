@@ -1,6 +1,6 @@
 <script setup>
 import { ref }                 from 'vue';
-import { sourceSampleDataUrl } from '@/assets/js/cfg';
+import { sourceSampleDataUrl } from '@/config.js';
 
 
 const code01 = ref({

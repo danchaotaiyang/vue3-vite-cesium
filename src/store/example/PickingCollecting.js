@@ -1,7 +1,7 @@
 import { computed, reactive, ref } from 'vue';
 import { defineStore } from 'pinia';
 import * as Cesium from 'cesium';
-import { cameraView, fontFamilyData } from '@/assets/js/cfg.js';
+import { cameraView, fontFamilyData } from '@/config.js';
 import { modifyAlpha } from '@/views/example/Blog/PickingCollecting/index.js';
 
 

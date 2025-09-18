@@ -1,8 +1,8 @@
 <script setup>
 import { computed, nextTick, onMounted, reactive, ref } from 'vue';
 import * as Cesium from 'cesium';
-import { BaiduMapImageryProvider } from '@/assets/lib/BaiduMapImageryProvider.js';
-import { cameraView, cesiumAccessTokenDefault } from '@/assets/js/cfg';
+import { ImageryProviderBaidu } from '@/assets/lib/ImageryProviderBaidu.js';
+import { cameraView, cesiumAccessTokenDefault } from '@/config.js';
 
 //■■■  Cesium  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 Cesium.Ion.defaultAccessToken = cesiumAccessTokenDefault;
@@ -1265,7 +1265,7 @@ const codeBaiDu2 = computed(() => {
     let road = '';
     if (stateBaidu.annotation) {
         road = `
-const providerRoad = new BaiduMapImageryProvider({
+const providerRoad = new ImageryProviderBaidu({
     type: "${ stateBaidu.tile }",
     url: "https://{s}.bdimg.com/",
     subdomains: [ "maponline0", "maponline1", "maponline2", "maponline3" ],
@@ -1275,7 +1275,7 @@ const providerRoad = new BaiduMapImageryProvider({
 viewer.scene.imageryLayers.addImageryProvider(providerRoad);`;
     }
     return {
-        js: `const providerTile = new BaiduMapImageryProvider({
+        js: `const providerTile = new ImageryProviderBaidu({
     type: "${ stateBaidu.tile }",
     url: "https://{s}.bdimg.com/",
     subdomains: [ "maponline0", "maponline1", "maponline2", "maponline3" ],
@@ -1302,7 +1302,7 @@ viewer.scene.imageryLayers.add(layerRoad);`;
     }
     return {
         js: `const providerAsync = (option) => new Promise((resolve) => {
-    resolve(new BaiduMapImageryProvider(option));
+    resolve(new ImageryProviderBaidu(option));
 });
 
 const optionTile = {
@@ -1925,7 +1925,7 @@ window.addEventListener('resize', () => {
                     <p>自定义provider加载百度影像瓦片，原方法是<a href="//blog.csdn.net/m0_60387551?type=blog" target="_blank">GIS之家家长</a>的<a href="//blog.csdn.net/m0_60387551/article/details/123812381" target="_blank">cesium接入百度影像地图</a>，使用的Cesium的版本为<span class="code">1.74</span>。
                     </p>
                     <monaco-editor :model-value="codeBaiDu" height="245px" />
-                    <h4>new BaiduMapImageryProvider(option)</h4>
+                    <h4>new ImageryProviderBaidu(option)</h4>
                     <p>百度地图卫星图<span class="code">maximumLevel</span>仅支持<span class="code">19</span>级，矢量图<span class="code">maximumLevel</span>支持<span class="code">20</span>级。
                     </p>
                     <p>这里对原方法做了一些改造：</p>
@@ -1982,5 +1982,5 @@ window.addEventListener('resize', () => {
 </template>
 
 <style lang="scss" scoped>
-@import "index";
+@use "index";
 </style>

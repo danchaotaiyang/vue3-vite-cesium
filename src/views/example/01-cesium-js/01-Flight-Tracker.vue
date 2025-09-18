@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted }          from 'vue';
 import * as Cesium            from 'cesium';
-import { cesiumAccessTokenDefault } from '@/assets/js/cfg';
+import { cesiumAccessTokenDefault } from '@/config.js';
 
 
 Cesium.Ion.defaultAccessToken = cesiumAccessTokenDefault;

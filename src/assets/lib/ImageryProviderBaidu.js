@@ -151,7 +151,7 @@ class ImageryProvider {
 
 /*  百度影像
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────*/
-export class BaiduMapImageryProvider extends ImageryProvider {
+export class ImageryProviderBaidu extends ImageryProvider {
 
     constructor(option) {
 
