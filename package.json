@@ -1,0 +1,29 @@
+{
+  "name": "fe-vue-3-vite-cesium",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "cesium": "^1.129.0",
+    "dayjs": "^1.11.13",
+    "disable-devtool": "^0.3.8",
+    "element-plus": "^2.9.10",
+    "lodash": "^4.17.21",
+    "monaco-editor": "^0.52.2",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "sass-embedded": "^1.89.0",
+    "vite": "^6.3.5",
+    "vite-plugin-cesium": "^1.2.23"
+  }
+}
