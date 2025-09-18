@@ -131,9 +131,9 @@ export default {
             path: '/example/blog/imagery-providers',
             name: 'Example-Blog-Imagery-Providers',
             meta: {
-                title: '地图平台瓦片',
+                title: '地图瓦片',
                 description: 'Cesium加载百度，高德，腾讯，天地图，谷歌，Bing地图，ArcGIS，OpenStreetMap，MapBox的瓦片',
-                updated: '2024年10月30日 14:53:51'
+                updated: '2025年9月18日 16:19'
             },
             component: () => import('../../views/example/Blog/ImageryProviders/index.vue')
         },
