@@ -362,47 +362,6 @@ table {
     }
 }
 
-.el-button {
-    --el-button-size: 20px;
-    padding: 5px 8px;
-
-    & + .el-button--small {
-        margin-left: 5px;
-    }
-}
-
-.el-radio-button__inner:hover {
-    color: var(--cesium-link-hover-color);
-}
-
-.el-form-item {
-    margin-bottom: 10px;
-}
-
-.el-form-item__label {
-    padding-right: 6px;
-}
-
-.el-input-group__prepend {
-    padding: 0 8px;
-    line-height: 1;
-}
-
-.el-popover {
-    --el-popover-padding: 8px;
-
-    .el-popconfirm__icon {
-        font-size: 1.1em;
-    }
-
-    .el-popconfirm__action {
-        margin-top: 4px;
-    }
-}
-
-.el-affix {
-    width: 100% !important;
-}
 
 .item-field {
     display: inline-flex;

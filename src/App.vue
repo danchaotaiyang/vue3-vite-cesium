@@ -105,6 +105,13 @@ document.title = `Cesium ${ VERSION }`;
 </div>
 </template>
 
+<style lang="scss">
+@use 'element-plus/dist/index.css';
+@use 'assets/css/element-plus.scss';
+@use 'assets/css/redefine.scss';
+@use 'assets/css/layout.scss';
+</style>
+
 <style lang="scss" scoped>
 .full-container {
     position: absolute;

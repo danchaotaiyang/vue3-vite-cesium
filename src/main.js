@@ -8,10 +8,6 @@ import App from './App.vue';
 import MonacoEditor from './components/MonacoEditor.vue';
 import CesiumExample from './components/CesiumExample.vue';
 
-import 'element-plus/dist/index.css';
-import './assets/css/redefine.scss';
-import './assets/css/layout.scss';
-
 
 const app = createApp(App);
 app.use(router);
