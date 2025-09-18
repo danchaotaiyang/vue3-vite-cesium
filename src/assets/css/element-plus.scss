@@ -1,4 +1,35 @@
 
+@for $i from 0 through 1000 {
+    @if $i % 5==0 {
+        .form-width-#{$i} {
+            --el-input-width: #{$i + px};
+            --el-select-width: #{$i + px};
+            --el-date-editor-width: #{$i + px};
+
+            .el-input {
+                --el-input-width: #{$i + px};
+            }
+
+            .el-input-number {
+                --el-input-width: #{$i + px};
+            }
+
+            .el-textarea {
+                --el-input-width: #{$i + px};
+            }
+
+            &.el-date-editor {
+                --el-date-editor-width: #{$i + px};
+            }
+
+            &.el-input-group {
+                width: #{$i + px};
+            }
+        }
+    }
+}
+
+
 .el-button {
     --el-button-size: 20px;
     padding: 5px 8px;

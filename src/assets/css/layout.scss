@@ -362,7 +362,6 @@ table {
     }
 }
 
-
 .item-field {
     display: inline-flex;
     align-items: center;
@@ -483,7 +482,7 @@ table {
             box-shadow: none !important;
         }
 
-        .el-input__suffix-inner>:first-child {
+        .el-input__suffix-inner > :first-child {
             margin-left: 4px;
         }
 
