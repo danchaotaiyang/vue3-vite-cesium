@@ -2,7 +2,7 @@
 
 import * as Cesium from 'cesium';
 import { cloneDeep } from 'lodash';
-import { usePickStore } from '@/stores/example/PickingCollecting.js';
+import { usePickStore } from '@/store/example/PickingCollecting.js';
 import { addPoint, cartesianToDegrees, waiting } from '@/assets/js/utl.js';
 import { graphicFill, modifyAlpha, pointPixelSize } from './index.js';
 

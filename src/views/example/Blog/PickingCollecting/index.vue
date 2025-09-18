@@ -1,6 +1,6 @@
 <script setup>
 import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue';
-import { usePickStore } from '@/stores/example/PickingCollecting';
+import { usePickStore } from '@/store/example/PickingCollecting';
 import * as point from './point';
 import * as polyline from './polyline';
 import * as polygon from './polygon';

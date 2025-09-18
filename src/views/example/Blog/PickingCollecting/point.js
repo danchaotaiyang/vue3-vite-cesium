@@ -1,6 +1,6 @@
 import * as Cesium from 'cesium';
 import { cloneDeep } from 'lodash';
-import { usePickStore } from '@/stores/example/PickingCollecting.js';
+import { usePickStore } from '@/store/example/PickingCollecting.js';
 import { addPoint, cartesianToDegrees, waiting } from '@/assets/js/utl.js';
 import { graphicFill, graphicStroke, graphicStrokeWidth, heightReference, labelBackgroundColor, labelBackgroundPadding, labelFill, labelFont, labelShowBackground, labelStroke, labelStrokeWidth, modifyAlpha, pointPixelSize, style, verticalOrigin } from './index.js';
 
