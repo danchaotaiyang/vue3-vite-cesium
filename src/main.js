@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
+import router from './router';
+import pinia from './store';
+import App from './App.vue';
 import ElementPlus from 'element-plus';
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 import * as ElementPlusIcons from '@element-plus/icons-vue';
-import pinia from './store';
-import router from './router';
-import App from './App.vue';
 import MonacoEditor from './components/MonacoEditor.vue';
 import CesiumExample from './components/CesiumExample.vue';
 
